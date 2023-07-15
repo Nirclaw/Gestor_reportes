@@ -10,11 +10,11 @@ proxyCreateTrainer.use((req, res, next) => {
     let data = plainToClass(createTrasiner, req.body, {
       excludeExtraneousValues: true,
     });
-    req.body=JSON.parse(JSON.stringify(data))
-    next()
+    req.body = JSON.parse(JSON.stringify(data));
+    next();
   } catch (error) {
-    res.status(error.status).send(error)
+    res.status(error.status).send(error);
   }
 });
 
-export default proxyCreateTrainer
+export default proxyCreateTrainer;
